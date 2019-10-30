@@ -4,163 +4,205 @@
 	<script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
 	<script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
 	<!-- end zero-md -->
-
+	<script src="js/jquery-3.1.1.min.js"></script>
 	<!-- bootstrap -->
 	<!-- bs deps -->
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<!-- end bs deps  -->
-
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	<!-- end bs -->
-
+	<script src="js/flickity.min.js"></script>
+	<script src="js/easypiechart.min.js"></script>
+	<!-- <script src="js/parallax.js"></script> -->
+	<script src="js/typed.min.js"></script>
+	<script src="js/datepicker.js"></script>
+	<script src="js/isotope.min.js"></script>
+	<script src="js/ytplayer.min.js"></script>
+	<script src="js/lightbox.min.js"></script>
+	<script src="js/granim.min.js"></script>
+	<script src="js/jquery.steps.min.js"></script>
+	<script src="js/countdown.min.js"></script>
+	<script src="js/twitterfetcher.min.js"></script>
+	<script src="js/spectragram.min.js"></script>
+	<script src="js/smooth-scroll.min.js"></script>
+	<script src="js/scripts.js"></script>
 	<!-- load custom theme -->
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/stack-interface.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/socicon.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/lightbox.min.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/flickity.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/iconsmind.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/jquery.steps.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/theme.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<script type="text/javascript" src="js/handlebars-v4.4.3.js"></script>
-
+	
+	<script id="category-template" type="text/x-handlebars-template">
+		<zero-md src="{{#md}}{{category}}{{/md}}"></zero-md>
+		<zero-md src="{{#md}}{{category}}-l2{{/md}}"></zero-md>
+		<zero-md src="{{#md}}{{category}}-l3{{/md}}"></zero-md>
+		<zero-md src="{{#md}}{{category}}-l4{{/md}}"></zero-md>
+		<zero-md src="{{#md}}{{category}}-l5{{/md}}"></zero-md>
+		<zero-md src="{{#md}}{{category}}-l6{{/md}}"></zero-md>
+		<zero-md src="{{#md}}{{category}}-l7{{/md}}"></zero-md>
+		<zero-md src="{{#md}}{{category}}-l8{{/md}}"></zero-md>
+	</script>
+	<script id="level-template" type="text/x-handlebars-template">
+		<zero-md src="{{#md}}{{level}}{{/md}}"></zero-md>
+		<zero-md src="{{#md}}impactful-results-{{level}}{{/md}}"></zero-md>
+		<zero-md src="{{#md}}technical-excellence-{{level}}{{/md}}"></zero-md>
+		<zero-md src="{{#md}}holistic-ownership-{{level}}{{/md}}"></zero-md>
+		<zero-md src="{{#md}}effective-teammate-{{level}}{{/md}}"></zero-md>
+	</script>
+	<script type="text/javascript">
+		function renderTemplates() {
+			var category_source   = document.getElementById("category-template").innerHTML;
+			window.category_template = Handlebars.compile(category_source);
+			var level_source   = document.getElementById("level-template").innerHTML;
+			window.level_template = Handlebars.compile(level_source);
+			//render categories
+			document.getElementById("v-pills-impactful-results").innerHTML = category_template({category: "impactful-results"});
+			document.getElementById("v-pills-technical-excellence").innerHTML = category_template({category: "technical-excellence"});
+			document.getElementById("v-pills-holistic-ownership").innerHTML = category_template({category: "holistic-ownership"});
+			document.getElementById("v-pills-effective-teammate").innerHTML = category_template({category: "effective-teammate"});
+			// render levels
+			document.getElementById("v-pills-l2").innerHTML = level_template({level: "l2"});
+			document.getElementById("v-pills-l3").innerHTML = level_template({level: "l3"});
+			document.getElementById("v-pills-l4").innerHTML = level_template({level: "l4"});
+			document.getElementById("v-pills-l5").innerHTML = level_template({level: "l5"});
+			document.getElementById("v-pills-l6").innerHTML = level_template({level: "l6"});
+			document.getElementById("v-pills-l7").innerHTML = level_template({level: "l7"});
+			document.getElementById("v-pills-l8").innerHTML = level_template({level: "l8"});
+		}
+		$( document ).ready(function() {
+			Handlebars.registerHelper('md', function(options) {
+				var md_link = "https://raw.githubusercontent.com/webedx-spark/eng-growth/master/makers/"+ options.fn(this) + ".md";
+				// for local comment above and uncomment below
+				// md_link = "../makers/" + options.fn(this) + ".md";
+				// console.log(md_link);
+				return md_link;
+			});
+		renderTemplates();
+		});
+	</script>
 	</meta>
 	
 	<body>
+		
+		<nav class="navbar bg-light">
+			<a class="navbar-brand" href="#">
+				<img src="imgs/logo.png" height = "40" alt="">Engineering Growth
+			</a>
+		</nav>
 		<div class="jumbotron">
-		  <h1 class="display-4">Growth at Coursera Engineering</h1>
-		  <zero-md src="../makers/makers-growth.md"></zero-md>
+			<h1 class="display-4">Growth at Coursera Engineering</h1>
+			<zero-md src="../makers/makers-growth.md"></zero-md>
 		</div>
-
-		<ul class="nav nav-tabs mb-3 justify-content-center" id="tabs-tab" role="tablist">
-		  <li class="nav-item">
-		    <a class="nav-link active" id="tabs-categories-tab" data-toggle="pill" href="#tabs-categories" role="tab" aria-controls="tabs-categories" aria-selected="true">Browse by categories</a>
-		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link" id="tabs-levels-tab" data-toggle="pill" href="#tabs-levels" role="tab" aria-controls="tabs-levels" aria-selected="false">Browse by levels</a>
-		  </li>
-		</ul>
-		<div class="tab-content" id="tabs-tabContent">
-		  <div class="tab-pane fade show active" id="tabs-categories" role="tabpanel" aria-labelledby="tabs-categories-tab">
-		  	<div class="container">
-		  		<div class="row">
-		  			<div class="nav flex-column nav-pills col-md-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-					  <a class="nav-link active" id="v-pills-impactful-results-tab" data-toggle="pill" href="#v-pills-impactful-results" role="tab" aria-controls="v-pills-impactful-results" aria-selected="true">impactful-results</a>
-					  <a class="nav-link" id="v-pills-technical-excellence-tab" data-toggle="pill" href="#v-pills-technical-excellence" role="tab" aria-controls="v-pills-technical-excellence" aria-selected="false">technical-excellence</a>
-					  <a class="nav-link" id="v-pills-holitic-ownership-tab" data-toggle="pill" href="#v-pills-holitic-ownership" role="tab" aria-controls="v-pills-holitic-ownership" aria-selected="false">holitic-ownership</a>
-					  <a class="nav-link" id="v-pills-effective-teammate-tab" data-toggle="pill" href="#v-pills-effective-teammate" role="tab" aria-controls="v-pills-effective-teammate" aria-selected="false">effective-teammate</a>
-					</div>
-					<div class="tab-content col-md-9" id="v-pills-tabContent">
-					  <div class="tab-pane fade show active" id="v-pills-impactful-results" role="tabpanel" aria-labelledby="v-pills-impactful-results-tab">
-					  	<zero-md src="../makers/impactful-results.md"></zero-md>
-					  	<zero-md src="../makers/impactful-results-l2.md"></zero-md>
-					  	<zero-md src="../makers/impactful-results-l3.md"></zero-md>
-					  	<zero-md src="../makers/impactful-results-l4.md"></zero-md>
-					  	<zero-md src="../makers/impactful-results-l5.md"></zero-md>
-					  	<zero-md src="../makers/impactful-results-l6.md"></zero-md>
-					  	<zero-md src="../makers/impactful-results-l7.md"></zero-md>
-					  	<zero-md src="../makers/impactful-results-l8.md"></zero-md>
-					  </div>
-					  <div class="tab-pane fade" id="v-pills-technical-excellence" role="tabpanel" aria-labelledby="v-pills-technical-excellence-tab">
-					  	<zero-md src="../makers/technical-excellence.md"></zero-md>
-					  	<zero-md src="../makers/technical-excellence-l2.md"></zero-md>
-					  	<zero-md src="../makers/technical-excellence-l3.md"></zero-md>
-					  	<zero-md src="../makers/technical-excellence-l4.md"></zero-md>
-					  	<zero-md src="../makers/technical-excellence-l5.md"></zero-md>
-					  	<zero-md src="../makers/technical-excellence-l6.md"></zero-md>
-					  	<zero-md src="../makers/technical-excellence-l7.md"></zero-md>
-					  	<zero-md src="../makers/technical-excellence-l8.md"></zero-md>
-					  </div>
-					  <div class="tab-pane fade" id="v-pills-holitic-ownership" role="tabpanel" aria-labelledby="v-pills-holitic-ownership-tab">
-					  	<zero-md src="../makers/holistic-ownership.md"></zero-md>
-					  	<zero-md src="../makers/holistic-ownership-l2.md"></zero-md>
-					  	<zero-md src="../makers/holistic-ownership-l3.md"></zero-md>
-					  	<zero-md src="../makers/holistic-ownership-l4.md"></zero-md>
-					  	<zero-md src="../makers/holistic-ownership-l5.md"></zero-md>
-					  	<zero-md src="../makers/holistic-ownership-l6.md"></zero-md>
-					  	<zero-md src="../makers/holistic-ownership-l7.md"></zero-md>
-					  	<zero-md src="../makers/holistic-ownership-l8.md"></zero-md>
-					  </div>
-					  <div class="tab-pane fade" id="v-pills-effective-teammate" role="tabpanel" aria-labelledby="v-pills-effective-teammate-tab">
-					  	<zero-md src="../makers/effective-teammate.md"></zero-md>
-					  	<zero-md src="../makers/effective-teammate-l2.md"></zero-md>
-					  	<zero-md src="../makers/effective-teammate-l3.md"></zero-md>
-					  	<zero-md src="../makers/effective-teammate-l4.md"></zero-md>
-					  	<zero-md src="../makers/effective-teammate-l5.md"></zero-md>
-					  	<zero-md src="../makers/effective-teammate-l6.md"></zero-md>
-					  	<zero-md src="../makers/effective-teammate-l7.md"></zero-md>
-					  	<zero-md src="../makers/effective-teammate-l8.md"></zero-md>
-					  </div>
-					</div>
-			  	</div>
-		  	</div>
-		  </div>
-		  <div class="tab-pane fade" id="tabs-levels" role="tabpanel" aria-labelledby="tabs-levels-tab">
-		  	<div class="container">
-	  			<div class="row">
-				  	<div class="nav flex-column nav-pills col-md-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-					  <a class="nav-link active" id="v-pills-l2-tab" data-toggle="pill" href="#v-pills-l2" role="tab" aria-controls="v-pills-l2" aria-selected="true">Software Engineer I</a>
-					  <a class="nav-link" id="v-pills-l3-tab" data-toggle="pill" href="#v-pills-l3" role="tab" aria-controls="v-pills-l3" aria-selected="false">Software Engineer II</a>
-					  <a class="nav-link" id="v-pills-l4-tab" data-toggle="pill" href="#v-pills-l4" role="tab" aria-controls="v-pills-l4" aria-selected="false">Senior Software Engineer</a>
-					  <a class="nav-link" id="v-pills-l5-tab" data-toggle="pill" href="#v-pills-l5" role="tab" aria-controls="v-pills-l5" aria-selected="false">Staff Software Engineer</a>
-					  <a class="nav-link" id="v-pills-l6-tab" data-toggle="pill" href="#v-pills-l6" role="tab" aria-controls="v-pills-l6" aria-selected="false">Senior Staff Software Engineer</a>
-					  <a class="nav-link" id="v-pills-l7-tab" data-toggle="pill" href="#v-pills-l7" role="tab" aria-controls="v-pills-l7" aria-selected="false">Principal Software Engineer</a>
-					  <a class="nav-link" id="v-pills-l8-tab" data-toggle="pill" href="#v-pills-l8" role="tab" aria-controls="v-pills-l8" aria-selected="false">Distinguished Software Engineer</a>
-					</div>
-					<div class="tab-content col-md-9" id="v-pills-tabContent">
-					  <div class="tab-pane fade show active" id="v-pills-l2" role="tabpanel" aria-labelledby="v-pills-l2-tab">
-					  	<zero-md src="../makers/l2.md"></zero-md>
-					  	<zero-md src="../makers/impactful-results-l2.md"></zero-md>
-					  	<zero-md src="../makers/technical-excellence-l2.md"></zero-md>
-					  	<zero-md src="../makers/holistic-ownership-l2.md"></zero-md>
-					  	<zero-md src="../makers/effective-teammate-l2.md"></zero-md>
-					  </div>
-					  <div class="tab-pane fade" id="v-pills-l3" role="tabpanel" aria-labelledby="v-pills-l3-tab">
-					  	<zero-md src="../makers/l3.md"></zero-md>
-					  	<zero-md src="../makers/impactful-results-l3.md"></zero-md>
-					  	<zero-md src="../makers/technical-excellence-l3.md"></zero-md>
-					  	<zero-md src="../makers/holistic-ownership-l3.md"></zero-md>
-					  	<zero-md src="../makers/effective-teammate-l3.md"></zero-md>
-					  </div>
-					  <div class="tab-pane fade" id="v-pills-l4" role="tabpanel" aria-labelledby="v-pills-l4-tab">
-					  	<zero-md src="../makers/l4.md"></zero-md>
-					  	<zero-md src="../makers/impactful-results-l4.md"></zero-md>
-					  	<zero-md src="../makers/technical-excellence-l4.md"></zero-md>
-					  	<zero-md src="../makers/holistic-ownership-l4.md"></zero-md>
-					  	<zero-md src="../makers/effective-teammate-l4.md"></zero-md>
-				  		</div>
-					  <div class="tab-pane fade" id="v-pills-l5" role="tabpanel" aria-labelledby="v-pills-l5-tab">
-					  	<zero-md src="../makers/l5.md"></zero-md>
-					  	<zero-md src="../makers/impactful-results-l5.md"></zero-md>
-					  	<zero-md src="../makers/technical-excellence-l5.md"></zero-md>
-					  	<zero-md src="../makers/holistic-ownership-l5.md"></zero-md>
-					  	<zero-md src="../makers/effective-teammate-l5.md"></zero-md>
-					  </div>
-
-					  <div class="tab-pane fade" id="v-pills-l6" role="tabpanel" aria-labelledby="v-pills-l6-tab">
-					  	<zero-md src="../makers/l6.md"></zero-md>
-					  	<zero-md src="../makers/impactful-results-l6.md"></zero-md>
-					  	<zero-md src="../makers/technical-excellence-l6.md"></zero-md>
-					  	<zero-md src="../makers/holistic-ownership-l6.md"></zero-md>
-					  	<zero-md src="../makers/effective-teammate-l6.md"></zero-md>
-					  </div>
-
-					  <div class="tab-pane fade" id="v-pills-l7" role="tabpanel" aria-labelledby="v-pills-l7-tab">
-					  	<zero-md src="../makers/l7.md"></zero-md>
-					  	<zero-md src="../makers/impactful-results-l7.md"></zero-md>
-					  	<zero-md src="../makers/technical-excellence-l7.md"></zero-md>
-					  	<zero-md src="../makers/holistic-ownership-l7.md"></zero-md>
-					  	<zero-md src="../makers/effective-teammate-l7.md"></zero-md>
-					  </div>
-
-					  <div class="tab-pane fade" id="v-pills-l8" role="tabpanel" aria-labelledby="v-pills-l8-tab">
-					  	<zero-md src="../makers/l8.md"></zero-md>
-					  	<zero-md src="../makers/impactful-results-l8.md"></zero-md>
-					  	<zero-md src="../makers/technical-excellence-l8.md"></zero-md>
-					  	<zero-md src="../makers/holistic-ownership-l8.md"></zero-md>
-					  	<zero-md src="../makers/effective-teammate-l8.md"></zero-md>
-					  </div>
-					</div>
-				</div>
+		<div class="container">
+			<div class="tabs-container tabs--vertical">
+				<ul class="tabs">
+					<li class="active">
+						<div class="tab__title">
+							<span class="h5">Impactful Results</span>
+						</div>
+						<div class="tab__content">
+							<div id="v-pills-impactful-results"></div>
+						</div>
+					</li>
+					<li>
+						<div class="tab__title">
+							<span class="h5">Technical Excellence</span>
+						</div>
+						<div class="tab__content">
+							<div id="v-pills-technical-excellence"></div>
+						</div>
+					</li>
+					<li>
+						<div class="tab__title">
+							<span class="h5">Holistic Ownership</span>
+						</div>
+						<div class="tab__content">
+							<div id="v-pills-holistic-ownership"></div>
+						</div>
+					</li>
+					<li>
+						<div class="tab__title">
+							<span class="h5">Effective Teammate</span>
+						</div>
+						<div class="tab__content">
+							<div id="v-pills-effective-teammate"></div>
+						</div>
+					</li>
+				</ul>
 			</div>
-		  </div>
-		  <div class="tab-pane fade" id="tabs-contact" role="tabpanel" aria-labelledby="tabs-contact-tab">...</div>
-		</div>	
+		</div>
+		<div class="container">
+			<div class="tabs-container tabs--vertical">
+				<ul class="tabs">
+					<li class="active">
+						<div class="tab__title">
+							<span class="h5">Software Engineer I</span>
+						</div>
+						<div class="tab__content">
+							<div id="v-pills-l2"></div>
+						</div>
+					</li>
+					<li>
+						<div class="tab__title">
+							<span class="h5">Software Engineer II</span>
+						</div>
+						<div class="tab__content">
+							<div id="v-pills-l3"></div>
+						</div>
+					</li>
+					<li>
+						<div class="tab__title">
+							<span class="h5">Senior Software Engineer</span>
+						</div>
+						<div class="tab__content">
+							<div id="v-pills-l4"></div>
+						</div>
+					</li>
+					<li>
+						<div class="tab__title">
+							<span class="h5">Staff Software Engineer</span>
+						</div>
+						<div class="tab__content">
+							<div id="v-pills-l5"></div>
+						</div>
+					</li>
+					<li>
+						<div class="tab__title">
+							<span class="h5">Senior Staff Software Engineer</span>
+						</div>
+						<div class="tab__content">
+							<div id="v-pills-l6"></div>
+						</div>
+					</li>
+					<li>
+						<div class="tab__title">
+							<span class="h5">Principle Software Engineer</span>
+						</div>
+						<div class="tab__content">
+							<div id="v-pills-l7"></div>
+						</div>
+					</li>
+					<li>
+						<div class="tab__title">
+							<span class="h5">Distinguished Software Engineer</span>
+						</div>
+						<div class="tab__content">
+							<div id="v-pills-l8"></div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
 	</body>
 </html>
