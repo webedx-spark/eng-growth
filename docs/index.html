@@ -5,14 +5,6 @@
 	<script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
 	<!-- end zero-md -->
 	<script src="js/jquery-3.1.1.min.js"></script>
-	<!-- bootstrap -->
-	<!-- bs deps -->
-	<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	<!-- end bs deps  -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-	<!-- end bs -->
 	<script src="js/flickity.min.js"></script>
 	<script src="js/easypiechart.min.js"></script>
 	<!-- <script src="js/parallax.js"></script> -->
@@ -28,6 +20,14 @@
 	<script src="js/spectragram.min.js"></script>
 	<script src="js/smooth-scroll.min.js"></script>
 	<script src="js/scripts.js"></script>
+	<!-- bootstrap -->
+	<!-- bs deps -->
+	<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<!-- end bs deps  -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<!-- end bs -->
 	<!-- load custom theme -->
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
@@ -44,21 +44,21 @@
 	<script type="text/javascript" src="js/handlebars-v4.4.3.js"></script>
 	
 	<script id="category-template" type="text/x-handlebars-template">
-		<zero-md src="{{#md}}{{category}}{{/md}}"></zero-md>
-		<zero-md src="{{#md}}{{category}}-l2{{/md}}"></zero-md>
-		<zero-md src="{{#md}}{{category}}-l3{{/md}}"></zero-md>
-		<zero-md src="{{#md}}{{category}}-l4{{/md}}"></zero-md>
-		<zero-md src="{{#md}}{{category}}-l5{{/md}}"></zero-md>
-		<zero-md src="{{#md}}{{category}}-l6{{/md}}"></zero-md>
-		<zero-md src="{{#md}}{{category}}-l7{{/md}}"></zero-md>
-		<zero-md src="{{#md}}{{category}}-l8{{/md}}"></zero-md>
+		<zero-md src="{{#md}}{{category}}{{/md}}" css-urls='["css/custom.css"]'></zero-md>
+		<zero-md src="{{#md}}{{category}}-l2{{/md}}"  css-urls='["css/custom.css"]'></zero-md>
+		<zero-md src="{{#md}}{{category}}-l3{{/md}}"  css-urls='["css/custom.css"]'></zero-md>
+		<zero-md src="{{#md}}{{category}}-l4{{/md}}" css-urls='["css/custom.css"]'></zero-md>
+		<zero-md src="{{#md}}{{category}}-l5{{/md}}" css-urls='["css/custom.css"]'></zero-md>
+		<zero-md src="{{#md}}{{category}}-l6{{/md}}" css-urls='["css/custom.css"]'></zero-md>
+		<zero-md src="{{#md}}{{category}}-l7{{/md}}" css-urls='["css/custom.css"]'></zero-md>
+		<zero-md src="{{#md}}{{category}}-l8{{/md}}" css-urls='["css/custom.css"]'></zero-md>
 	</script>
 	<script id="level-template" type="text/x-handlebars-template">
-		<zero-md src="{{#md}}{{level}}{{/md}}"></zero-md>
-		<zero-md src="{{#md}}impactful-results-{{level}}{{/md}}"></zero-md>
-		<zero-md src="{{#md}}technical-excellence-{{level}}{{/md}}"></zero-md>
-		<zero-md src="{{#md}}holistic-ownership-{{level}}{{/md}}"></zero-md>
-		<zero-md src="{{#md}}effective-teammate-{{level}}{{/md}}"></zero-md>
+		<zero-md src="{{#md}}{{level}}{{/md}}" css-urls='["css/custom.css"]'></zero-md>
+		<zero-md src="{{#md}}impactful-results-{{level}}{{/md}}" css-urls='["css/custom.css"]'></zero-md>
+		<zero-md src="{{#md}}technical-excellence-{{level}}{{/md}}" css-urls='["css/custom.css"]'></zero-md>
+		<zero-md src="{{#md}}holistic-ownership-{{level}}{{/md}}" css-urls='["css/custom.css"]'></zero-md>
+		<zero-md src="{{#md}}effective-teammate-{{level}}{{/md}}" css-urls='["css/custom.css"]'></zero-md>
 	</script>
 	<script type="text/javascript">
 		function renderTemplates() {
@@ -94,115 +94,225 @@
 	</meta>
 	
 	<body>
-		
-		<nav class="navbar bg-light">
-			<a class="navbar-brand" href="#">
-				<img src="imgs/logo.png" height = "40" alt="">Engineering Growth
-			</a>
+		<nav id="menu2" class="bar bar-2 hidden-xs bar--absolute bar--transparent">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-2 text-center text-left-sm hidden-xs order-lg-1">
+						<div class="bar__module">
+							<a href="index.html">
+								<img class="logo logo-light" alt="logo" src="imgs/logo-light.png">
+								<img class="logo logo-dark" alt="logo" src="imgs/logo.png">
+							</a>
+						</div>
+						<!--end module-->
+					</div>
+					<div class="col-lg-5 order-lg-2">
+						<div class="bar__module">
+							<ul class="menu-horizontal text-left">
+								<li class="">
+									<a href=""><span class="">Coursera Values</span></a>
+								</li>
+							</ul>
+						</div>
+						<div class="bar__module">
+							<ul class="menu-horizontal text-left">
+								<li class="">
+									<span class="">Engineering Principles</span>
+								</li>
+							</ul>
+						</div>
+						<div class="bar__module">
+							<ul class="menu-horizontal text-left">
+								<li class="">
+									<span class="">Leadership Principles</span>
+								</li>
+							</ul>
+						</div>
+						<!--end module-->
+					</div>
+				</div>
+				<!--end of row-->
+			</div>
+			<!--end of container-->
 		</nav>
-		<div class="jumbotron">
-			<h1 class="display-4">Growth at Coursera Engineering</h1>
-			<zero-md src="../makers/makers-growth.md"></zero-md>
-		</div>
-		<div class="container">
-			<div class="tabs-container tabs--vertical">
-				<ul class="tabs">
-					<li class="active">
-						<div class="tab__title">
-							<span class="h5">Impactful Results</span>
-						</div>
-						<div class="tab__content">
-							<div id="v-pills-impactful-results"></div>
-						</div>
-					</li>
-					<li>
-						<div class="tab__title">
-							<span class="h5">Technical Excellence</span>
-						</div>
-						<div class="tab__content">
-							<div id="v-pills-technical-excellence"></div>
-						</div>
-					</li>
-					<li>
-						<div class="tab__title">
-							<span class="h5">Holistic Ownership</span>
-						</div>
-						<div class="tab__content">
-							<div id="v-pills-holistic-ownership"></div>
-						</div>
-					</li>
-					<li>
-						<div class="tab__title">
-							<span class="h5">Effective Teammate</span>
-						</div>
-						<div class="tab__content">
-							<div id="v-pills-effective-teammate"></div>
-						</div>
-					</li>
-				</ul>
+		<section class="cover cover-features imagebg space--lg" data-overlay="2">
+			<div class="background-image-holder" style="background: url(&quot;imgs/hero.png&quot;); opacity: 1;">
+				<img alt="background" src="imgs/hero.png">
 			</div>
-		</div>
-		<div class="container">
-			<div class="tabs-container tabs--vertical">
-				<ul class="tabs">
-					<li class="active">
-						<div class="tab__title">
-							<span class="h5">Software Engineer I</span>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 col-lg-6">
+						<h1>
+						Growth at Coursera Engineering
+						</h1>
+						<p class="lead">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						</p>
+						<hr class="short">
+						<p>For any question or feedback, please reach out to <a href="">@eng-rubric</a> or start a discussion in this <a href="">slack channel</a></p>
+					</div>
+					<div class="col-md-4 col-lg-3">
+						<div class="text-block text-center boxed boxed--border">
+							<img class="" src="imgs/categories.png" />
+							<h4>Growth Categories</h4>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+							</p>
+							<a class="" href="#categories-section">Explore</a>
+							<!-- <a href="">Explore</a> -->
 						</div>
-						<div class="tab__content">
-							<div id="v-pills-l2"></div>
+					</div>
+					<div class="col-md-4 col-lg-3">
+						<div class="text-block text-center boxed boxed--border">
+							<img class="" src="imgs/levels.png" />
+							<h4>Growth Levels</h4>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+							</p>
+							<a class="" href="#levels-section">Explore</a>
 						</div>
-					</li>
-					<li>
-						<div class="tab__title">
-							<span class="h5">Software Engineer II</span>
-						</div>
-						<div class="tab__content">
-							<div id="v-pills-l3"></div>
-						</div>
-					</li>
-					<li>
-						<div class="tab__title">
-							<span class="h5">Senior Software Engineer</span>
-						</div>
-						<div class="tab__content">
-							<div id="v-pills-l4"></div>
-						</div>
-					</li>
-					<li>
-						<div class="tab__title">
-							<span class="h5">Staff Software Engineer</span>
-						</div>
-						<div class="tab__content">
-							<div id="v-pills-l5"></div>
-						</div>
-					</li>
-					<li>
-						<div class="tab__title">
-							<span class="h5">Senior Staff Software Engineer</span>
-						</div>
-						<div class="tab__content">
-							<div id="v-pills-l6"></div>
-						</div>
-					</li>
-					<li>
-						<div class="tab__title">
-							<span class="h5">Principle Software Engineer</span>
-						</div>
-						<div class="tab__content">
-							<div id="v-pills-l7"></div>
-						</div>
-					</li>
-					<li>
-						<div class="tab__title">
-							<span class="h5">Distinguished Software Engineer</span>
-						</div>
-						<div class="tab__content">
-							<div id="v-pills-l8"></div>
-						</div>
-					</li>
-				</ul>
-			</div>
+					</div>
+				</div>
+				<!--end of container-->
+			</section>
+			<section id = "categories-section" class="bg--light space--sm">
+				<div class="container">
+					<h2>Engineering Growth Categories</h2>
+					<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<hr class="short">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<div class="tabs-container tabs--vertical" data-content-align="left">
+						<ul class="tabs">
+							<li class="active">
+								<div class="tab__title">
+									<span class="h5">Impactful Results</span>
+								</div>
+								<div class="tab__content">
+									<div class="text-left" id="v-pills-impactful-results"></div>
+								</div>
+							</li>
+							<li>
+								<div class="tab__title">
+									<span class="h5">Technical Excellence</span>
+								</div>
+								<div class="tab__content">
+									<div id="v-pills-technical-excellence"></div>
+								</div>
+							</li>
+							<li>
+								<div class="tab__title">
+									<span class="h5">Holistic Ownership</span>
+								</div>
+								<div class="tab__content">
+									<div id="v-pills-holistic-ownership"></div>
+								</div>
+							</li>
+							<li>
+								<div class="tab__title">
+									<span class="h5">Effective Teammate</span>
+								</div>
+								<div class="tab__content">
+									<div id="v-pills-effective-teammate"></div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<hr>
+			<section id = "levels-section" class="bg--light space--sm">
+				<div class="container">
+					<h2>Engineering Levels</h2>
+					<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<hr class="short">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<div class="tabs-container tabs--vertical" data-content-align="left">
+						<ul class="tabs">
+							<li class="active">
+								<div class="tab__title">
+									<span class="h5">Software Engineer I</span>
+								</div>
+								<div class="tab__content">
+									<div id="v-pills-l2"></div>
+								</div>
+							</li>
+							<li>
+								<div class="tab__title">
+									<span class="h5">Software Engineer II</span>
+								</div>
+								<div class="tab__content">
+									<div id="v-pills-l3"></div>
+								</div>
+							</li>
+							<li>
+								<div class="tab__title">
+									<span class="h5">Senior Software Engineer</span>
+								</div>
+								<div class="tab__content">
+									<div id="v-pills-l4"></div>
+								</div>
+							</li>
+							<li>
+								<div class="tab__title">
+									<span class="h5">Staff Software Engineer</span>
+								</div>
+								<div class="tab__content">
+									<div id="v-pills-l5"></div>
+								</div>
+							</li>
+							<li>
+								<div class="tab__title">
+									<span class="h5">Senior Staff Software Engineer</span>
+								</div>
+								<div class="tab__content">
+									<div id="v-pills-l6"></div>
+								</div>
+							</li>
+							<li>
+								<div class="tab__title">
+									<span class="h5">Principle Software Engineer</span>
+								</div>
+								<div class="tab__content">
+									<div id="v-pills-l7"></div>
+								</div>
+							</li>
+							<li>
+								<div class="tab__title">
+									<span class="h5">Distinguished Software Engineer</span>
+								</div>
+								<div class="tab__content">
+									<div id="v-pills-l8"></div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
 		</div>
 	</body>
 </html>

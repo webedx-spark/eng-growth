@@ -1,1 +1,9 @@
-/*! Place your custom styles here */
+html {
+  scroll-behavior: smooth;
+}
+blockquote {
+  margin: 0 0 1rem; }/*! Place your custom styles here */
+
+div.markdown-body {
+	font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif !important;
+}
