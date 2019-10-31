@@ -82,9 +82,9 @@
 		}
 		$( document ).ready(function() {
 			Handlebars.registerHelper('md', function(options) {
-				// var md_link = "https://raw.githubusercontent.com/webedx-spark/eng-growth/master/makers/"+ options.fn(this) + ".md";
+				var md_link = "https://raw.githubusercontent.com/webedx-spark/eng-growth/master/makers/"+ options.fn(this) + ".md";
 				// for local comment above and uncomment below
-				md_link = "../makers/" + options.fn(this) + ".md";
+				// md_link = "../makers/" + options.fn(this) + ".md";
 				// console.log(md_link);
 				return md_link;
 			});
