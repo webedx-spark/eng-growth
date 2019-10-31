@@ -1,7 +1,10 @@
-### technical-excellence-l7
-> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+### Technical Excellence - Principal Software Engineer (L7)
+L7 engineers demonstrate technical excellence by:
+* Being recognized as a thought leader in at least one field of engineering.
+* Demonstrating the ability to assess the current state of engineering architecture and determine risks and misalignments with future product directions.
+* Having the ability to influence changes needed to prepare engineering for the future and facilitate the evolution of our systems.
+
+Here are some examples of behaviors that we believe would be appropriate for an L7:
+* Inventing a write ahead log system that solves the problem of providing a foundation for a reliable ledger system in a distributed environment.
+* Operationalizing the write ahead log system and open sourcing the system.
+<hr>

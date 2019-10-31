@@ -82,9 +82,9 @@
 		}
 		$( document ).ready(function() {
 			Handlebars.registerHelper('md', function(options) {
-				var md_link = "https://raw.githubusercontent.com/webedx-spark/eng-growth/master/makers/"+ options.fn(this) + ".md";
+				// var md_link = "https://raw.githubusercontent.com/webedx-spark/eng-growth/master/makers/"+ options.fn(this) + ".md";
 				// for local comment above and uncomment below
-				// md_link = "../makers/" + options.fn(this) + ".md";
+				md_link = "../makers/" + options.fn(this) + ".md";
 				// console.log(md_link);
 				return md_link;
 			});
@@ -106,26 +106,32 @@
 						</div>
 						<!--end module-->
 					</div>
-					<div class="col-lg-5 order-lg-2">
+					<div class="col-lg-10 order-lg-2">
 						<div class="bar__module">
 							<ul class="menu-horizontal text-left">
-								<li class="">
-									<a href=""><span class="">Coursera Values</span></a>
-								</li>
+								<a href="https://about.coursera.org/careers#values-box" target="_blank" class="text-light">
+									<li class="">
+										<span class="">Coursera Values</span>
+									</li>
+								</a>
 							</ul>
 						</div>
 						<div class="bar__module">
 							<ul class="menu-horizontal text-left">
-								<li class="">
-									<span class="">Engineering Principles</span>
-								</li>
+								<a href="https://webedx-spark.github.io/eng-values/" target="_blank" class="text-light">
+									<li class="">
+										<span class="">Engineering Values</span>
+									</li>
+								</a>
 							</ul>
 						</div>
 						<div class="bar__module">
 							<ul class="menu-horizontal text-left">
-								<li class="">
-									<span class="">Leadership Principles</span>
-								</li>
+								<a href="https://coursera.atlassian.net/wiki/spaces/PEP/pages/268763323/Coursera+Leadership+Principles" target="_blank" class="text-light">
+									<li class="">
+										<span class="">Leadership Principles</span>
+									</li>
+								</a>
 							</ul>
 						</div>
 						<!--end module-->
@@ -153,6 +159,7 @@
 						</p>
 						<hr class="short">
 						<p>For any question or feedback, please reach out to <a href="">@eng-rubric</a> or start a discussion in this <a href="">slack channel</a></p>
+						<br>
 					</div>
 					<div class="col-md-4 col-lg-3">
 						<div class="text-block text-center boxed boxed--border">
@@ -162,7 +169,7 @@
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
 							</p>
-							<a class="" href="#categories-section">Explore</a>
+							<a class="btn btn--sm" href="#categories-section">Explore</a>
 							<!-- <a href="">Explore</a> -->
 						</div>
 					</div>
@@ -174,7 +181,7 @@
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
 							</p>
-							<a class="" href="#levels-section">Explore</a>
+							<a class="btn btn--sm" href="#levels-section">Explore</a>
 						</div>
 					</div>
 				</div>
@@ -202,7 +209,7 @@
 								<div class="tab__title">
 									<span class="h5">Impactful Results</span>
 								</div>
-								<div class="tab__content">
+								<div class="tab__content boxed boxed--border bg--secondary text-secondary">
 									<div class="text-left" id="v-pills-impactful-results"></div>
 								</div>
 							</li>
@@ -210,7 +217,7 @@
 								<div class="tab__title">
 									<span class="h5">Technical Excellence</span>
 								</div>
-								<div class="tab__content">
+								<div class="tab__content boxed boxed--border bg--secondary text-secondary">
 									<div id="v-pills-technical-excellence"></div>
 								</div>
 							</li>
@@ -218,7 +225,7 @@
 								<div class="tab__title">
 									<span class="h5">Holistic Ownership</span>
 								</div>
-								<div class="tab__content">
+								<div class="tab__content boxed boxed--border bg--secondary text-secondary">
 									<div id="v-pills-holistic-ownership"></div>
 								</div>
 							</li>
@@ -226,7 +233,7 @@
 								<div class="tab__title">
 									<span class="h5">Effective Teammate</span>
 								</div>
-								<div class="tab__content">
+								<div class="tab__content boxed boxed--border bg--secondary text-secondary">
 									<div id="v-pills-effective-teammate"></div>
 								</div>
 							</li>
@@ -257,7 +264,7 @@
 								<div class="tab__title">
 									<span class="h5">Software Engineer I</span>
 								</div>
-								<div class="tab__content">
+								<div class="tab__content boxed boxed--border bg--secondary text-secondary">
 									<div id="v-pills-l2"></div>
 								</div>
 							</li>
@@ -265,7 +272,7 @@
 								<div class="tab__title">
 									<span class="h5">Software Engineer II</span>
 								</div>
-								<div class="tab__content">
+								<div class="tab__content boxed boxed--border bg--secondary text-secondary">
 									<div id="v-pills-l3"></div>
 								</div>
 							</li>
@@ -273,7 +280,7 @@
 								<div class="tab__title">
 									<span class="h5">Senior Software Engineer</span>
 								</div>
-								<div class="tab__content">
+								<div class="tab__content boxed boxed--border bg--secondary text-secondary">
 									<div id="v-pills-l4"></div>
 								</div>
 							</li>
@@ -281,7 +288,7 @@
 								<div class="tab__title">
 									<span class="h5">Staff Software Engineer</span>
 								</div>
-								<div class="tab__content">
+								<div class="tab__content boxed boxed--border bg--secondary text-secondary">
 									<div id="v-pills-l5"></div>
 								</div>
 							</li>
@@ -289,7 +296,7 @@
 								<div class="tab__title">
 									<span class="h5">Senior Staff Software Engineer</span>
 								</div>
-								<div class="tab__content">
+								<div class="tab__content boxed boxed--border bg--secondary text-secondary">
 									<div id="v-pills-l6"></div>
 								</div>
 							</li>
@@ -297,7 +304,7 @@
 								<div class="tab__title">
 									<span class="h5">Principle Software Engineer</span>
 								</div>
-								<div class="tab__content">
+								<div class="tab__content boxed boxed--border bg--secondary text-secondary">
 									<div id="v-pills-l7"></div>
 								</div>
 							</li>
@@ -305,7 +312,7 @@
 								<div class="tab__title">
 									<span class="h5">Distinguished Software Engineer</span>
 								</div>
-								<div class="tab__content">
+								<div class="tab__content boxed boxed--border bg--secondary text-secondary">
 									<div id="v-pills-l8"></div>
 								</div>
 							</li>

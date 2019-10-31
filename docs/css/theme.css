@@ -6452,12 +6452,12 @@ a.block:hover > .feature {
   margin-top: 0;
 }
 .tabs-container.tabs--vertical .tabs-content > li:not(.active) .tab__content {
-  animation: fadeOutUp .5s ease forwards;
-  -webkit-animation: fadeOutUp .5s ease forwards;
+  /*animation: fadeOutUp .5s ease forwards;
+  -webkit-animation: fadeOutUp .5s ease forwards;*/
 }
 .tabs-container.tabs--vertical .tabs-content > li.active .tab__content {
-  animation: fadeInUp .5s ease forwards;
-  -webkit-animation: fadeInUp .5s ease forwards;
+  /*animation: fadeInUp .5s ease forwards;
+  -webkit-animation: fadeInUp .5s ease forwards;*/
   backface-visibility: hidden;
 }
 .tabs-container.tabs--vertical.tabs--icons .tabs {
@@ -6477,12 +6477,12 @@ a.block:hover > .feature {
     margin-bottom: 1.85714286em;
   }
   .tabs-container.tabs--vertical .tabs-content > li:not(.active) .tab__content {
-    animation: fadeOutRight .5s ease forwards;
-    -webkit-animation: fadeOutRight .5s ease forwards;
+    /*animation: fadeOutRight .5s ease forwards;
+    -webkit-animation: fadeOutRight .5s ease forwards;*/
   }
   .tabs-container.tabs--vertical .tabs-content > li.active .tab__content {
-    animation: fadeInLeft .5s ease forwards;
-    -webkit-animation: fadeInLeft .5s ease forwards;
+   /* animation: fadeInLeft .5s ease forwards;
+    -webkit-animation: fadeInLeft .5s ease forwards;*/
     backface-visibility: hidden;
   }
 }
@@ -6558,12 +6558,12 @@ a.block:hover > .feature {
   display: block;
   opacity: 0;
   pointer-events: none;
-  animation: fadeOutRight .5s ease forwards;
-  -webkit-animation: fadeOutRight .5s ease forwards;
+  /*animation: fadeOutRight .5s ease forwards;
+  -webkit-animation: fadeOutRight .5s ease forwards;*/
 }
 .tabs-content > li.active {
-  animation: fadeInLeft .5s ease forwards;
-  -webkit-animation: fadeInLeft .5s ease forwards;
+  /*animation: fadeInLeft .5s ease forwards;
+  -webkit-animation: fadeInLeft .5s ease forwards;*/
   backface-visibility: hidden;
 }
 @media all and (max-width: 767px) {

@@ -6,4 +6,16 @@ blockquote {
 
 div.markdown-body {
 	font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif !important;
+	/*font-size: 1.15em;*/
+}
+
+div.markdown-body p{
+	/*font-size: 4.15em;*/
+}
+
+div.markdown-body hr {
+	width: 2.78571429em;
+	border-color: #4a90e2;
+	margin: 1.85714286em 0;
+  	/*border-color: #fafafa;*/
 }
